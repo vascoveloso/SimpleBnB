@@ -1,0 +1,47 @@
+syntax = "proto3";
+package pt.ulisboa.tecnico.simplebnb.contract.guest;
+
+import "BnbDefinitions.proto";
+
+message guestJoinRequest {
+  string guestName = 1;
+  int32 guestId = 2;
+}
+
+message guestJoinResponse {
+  int32 guestId = 1;
+}
+
+message listAllRequest {}
+
+message listAllResponse {
+  repeated House houseList = 1;
+}
+
+message filterByRequest {
+  string guestFilter = 1;
+  string guestValue = 2;
+}
+
+message filterByResponse {
+  repeated House filterList = 1;
+}
+
+message bookHouseRequest {
+  int32 houseId = 1;
+  string date = 2;
+  int32 nights = 3;
+}
+
+message bookHouseResponse {
+  int32 houseId = 1;
+  int32 nights = 2;
+  string date = 3;
+}
+
+service guestService {
+  rpc guestJoin(guestJoinRequest) returns (guestJoinResponse);
+  rpc listAll(listAllRequest) returns (listAllResponse);
+  rpc filterBy(filterByRequest) returns (filterByResponse);
+  rpc bookHouse(bookHouseRequest) returns (bookHouseResponse);
+}

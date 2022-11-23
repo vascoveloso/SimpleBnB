@@ -1,0 +1,50 @@
+syntax = "proto3";
+package pt.ulisboa.tecnico.simplebnb.contract.bnbserver;
+
+import "BnbDefinitions.proto";
+
+message Host {
+  string hostName = 1;
+  int32 hostId = 2;
+}
+
+message Guest {
+  string guestName = 1;
+  int32 guestId = 2;
+}
+
+message House {
+  string houseName = 1;
+  string houseAddress = 2;
+  int32 houseNumber = 3;
+  string houseFloor = 4;
+  string houseLocation = 5;
+  string housePostalCode = 6;
+  string houseCapacity = 7;
+  int32 houseCost = 8;
+  int32 houseId = 9;
+}
+
+message BnBState {
+  repeated House houses = 1;
+  repeated Host hosts = 2;
+  repeated Guest guests = 3;
+}
+
+enum ResponseCode {
+  OK = 0;
+  INACTIVE_SERVER = 1;
+  WRITING_NOT_SUPPORTED = 2;
+}
+
+message PropagateStateRequest {
+  BnBState bnBSate = 1;
+}
+
+message PropagateStateResponse {
+  ResponseCode code = 1;
+}
+
+service BnBServerService {
+  rpc propagateState(PropagateStateRequest) returns (PropagateStateResponse);
+}

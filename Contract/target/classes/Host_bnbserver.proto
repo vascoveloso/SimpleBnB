@@ -1,0 +1,35 @@
+syntax = "proto3";
+package pt.ulisboa.tecnico.simplebnb.contract.host;
+
+import "BnbDefinitions.proto";
+
+message HostJoinRequest {
+  string hostName = 1;
+  int32 hostId = 2;
+}
+
+message HostJoinResponse {
+  int32 hostId = 1;
+}
+
+message addHouseRequest {
+  House house = 1;
+}
+
+message addHouseResponse {
+  int32 houseId = 1;
+}
+
+message removeHouseRequest {
+  int32 houseId = 1;
+}
+
+message removeHouseResponse {
+  int32 check = 1;
+}
+
+service HostService {
+  rpc hostJoin(HostJoinRequest) returns (HostJoinResponse);
+  rpc addHouse(addHouseRequest) returns (addHouseResponse);
+  rpc removeHouse(removeHouseRequest) returns (removeHouseResponse);
+}

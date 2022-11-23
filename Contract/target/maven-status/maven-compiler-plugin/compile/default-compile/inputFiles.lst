@@ -1,0 +1,7 @@
+/home/vasco/IdeaProjects/SimpleBnB/Contract/target/generated-sources/protobuf/grpc-java/pt/ulisboa/tecnico/simplebnb/contract/host/HostServiceGrpc.java
+/home/vasco/IdeaProjects/SimpleBnB/Contract/target/generated-sources/protobuf/grpc-java/pt/ulisboa/tecnico/simplebnb/contract/guest/guestServiceGrpc.java
+/home/vasco/IdeaProjects/SimpleBnB/Contract/target/generated-sources/protobuf/grpc-java/pt/ulisboa/tecnico/simplebnb/contract/bnbserver/BnBServerServiceGrpc.java
+/home/vasco/IdeaProjects/SimpleBnB/Contract/target/generated-sources/protobuf/java/pt/ulisboa/tecnico/simplebnb/contract/host/HostBnbserver.java
+/home/vasco/IdeaProjects/SimpleBnB/Contract/target/generated-sources/protobuf/java/pt/ulisboa/tecnico/simplebnb/contract/guest/GuestBnbserver.java
+/home/vasco/IdeaProjects/SimpleBnB/Contract/target/generated-sources/protobuf/java/pt/ulisboa/tecnico/simplebnb/contract/BnbDefinitions.java
+/home/vasco/IdeaProjects/SimpleBnB/Contract/target/generated-sources/protobuf/java/pt/ulisboa/tecnico/simplebnb/contract/bnbserver/BnbServerBnbserver.java
